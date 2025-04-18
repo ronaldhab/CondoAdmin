@@ -33,7 +33,7 @@
             <div class="elemento-derecha-texto">
                 <span>
                     <?php
-                    include "dbteams.php";
+                    include "db_condominios.php";
                     $sql = "select * from t_residentes";
                     $resultado = mysqli_query($cone, $sql);
                     ?>

@@ -40,7 +40,7 @@ if (isset($_POST['buscar'])) {
             t_residentes r ON r.Id_residente = c.Id_residente
         WHERE 
             r.Cedula = '$cedula' AND c.Pagos = 'Pagado';";
-        
+
         $resultado_meses = mysqli_query($cone, $sql_meses_pagados);
 
         while ($row_mes = mysqli_fetch_assoc($resultado_meses)) {
@@ -56,7 +56,7 @@ if (isset($_POST['buscar'])) {
             t_residentes r ON r.Id_residente = c.Id_residente
         WHERE 
             r.Cedula = '$cedula' AND c.Pagos = 'Deuda';";
-        
+
         $resultado_deudas = mysqli_query($cone, $sql_meses_deuda);
 
         while ($row_deuda = mysqli_fetch_assoc($resultado_deudas)) {
@@ -70,12 +70,14 @@ if (isset($_POST['buscar'])) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Buscar Residente</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -139,4 +141,5 @@ if (isset($_POST['buscar'])) {
         </div>
     </footer>
 </body>
+
 </html>

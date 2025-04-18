@@ -11,15 +11,15 @@
 <body>
     <header>
         <div class="container">
-        <a href="home.php">
-            <img src="img/banner.jpg" class="logo">
-            <h1>Control de Condominios</h1>
+            <a href="home.php">
+                <img src="img/banner.jpg" class="logo">
+                <h1>Control de Condominios</h1>
         </div>
     </header>
 
     <?php
     include "nav_home.php";
-    include "dbteams.php"; // Conexión a la base de datos.
+    //include "dbteams.php"; // Conexión a la base de datos.
     session_start();
 
     // Consulta para obtener todas las propiedades.
