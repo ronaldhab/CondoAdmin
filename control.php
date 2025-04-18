@@ -33,6 +33,9 @@ if (isset($_POST['eliminar'])) {
     } else {
         $error = "Error al eliminar la deuda: " . mysqli_error($cone);
     }
+    // Redirigir para recargar la página y evitar reenvío del formulario
+    header("Location: control.php");
+    exit();
 }
 
 // Editar estado de pago existente
@@ -40,13 +43,16 @@ if (isset($_POST['editar'])) {
     $id_cobranza = mysqli_real_escape_string($cone, $_POST['id_cobranza']);
     $estado_pago = mysqli_real_escape_string($cone, $_POST['estado_pago']);
 
-    $sql_update = "UPDATE t_cobranzas SET Pagos = '$estado_pago' WHERE Id_cobranza = '$id_cobranza'";
+    $sql_update = "UPDATE t_cobranzas SET Pagos = '$estado_pago' WHERE Id_cobranza = $id_cobranza";
 
     if (mysqli_query($cone, $sql_update)) {
         $mensaje = "Estado de pago actualizado exitosamente.";
     } else {
         $error = "Error al actualizar el estado de pago: " . mysqli_error($cone);
     }
+    // Redirigir para recargar la página y evitar reenvío del formulario
+    header("Location: control.php");
+    exit();
 }
 
 // Validar y agregar nuevo estado de pago
@@ -72,17 +78,22 @@ if (isset($_POST['agregar'])) {
     } else {
         $error = "El número de apartamento no existe.";
     }
+    // Redirigir para recargar la página y evitar reenvío del formulario
+    header("Location: control.php");
+    exit();
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Control de Pagos</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -131,7 +142,7 @@ if (isset($_POST['agregar'])) {
                     <label for="id_residente">Residente:</label>
                     <select name="id_residente" id="id_residente" required>
                         <option value="">Seleccionar Residente</option>
-                        <?php 
+                        <?php
                         $sql_residentes = "SELECT Id_residente, Nombre, Cedula FROM t_residentes";
                         $resultado_residentes = mysqli_query($cone, $sql_residentes);
                         while ($row_residente = mysqli_fetch_assoc($resultado_residentes)) { ?>
@@ -188,9 +199,9 @@ if (isset($_POST['agregar'])) {
                                         <form method="POST" style="display:inline;">
                                             <input type="hidden" name="id_cobranza" value="<?php echo $row_cobranza['Id_cobranza']; ?>">
                                             <select name="estado_pago" required>
-                                            <option value="Pagado">Pagado</option>
-                                            <option value="Deuda">Deuda</option>
-                                        </select>
+                                                <option value="Pagado">Pagado</option>
+                                                <option value="Deuda">Deuda</option>
+                                            </select>
                                     </td>
                                     <td>
                                         <button type="submit" name="editar" class="actualizar">Actualizar</button>
@@ -215,4 +226,5 @@ if (isset($_POST['agregar'])) {
         </div>
     </footer>
 </body>
+
 </html>
