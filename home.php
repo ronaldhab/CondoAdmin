@@ -14,7 +14,8 @@
         <div class="container">
             <a href="home.php">
                 <img src="img/banner.jpg" class="logo">
-                <h1>Control de Condominios</h1>
+            </a>
+            <h1 class="title">Control de Condominios</h1>
         </div>
     </header>
 
