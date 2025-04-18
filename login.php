@@ -1,5 +1,5 @@
 <?php
-require_once 'dbteams.php';
+require_once 'db_condominios.php';
 
 if (isset($_POST['nombre_usuario']) && isset($_POST['password'])) {
 

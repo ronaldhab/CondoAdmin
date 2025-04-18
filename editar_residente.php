@@ -1,5 +1,5 @@
 <?php
-include "dbteams.php"; // Conexión a la base de datos.
+include "db_condominios.php"; // Conexión a la base de datos.
 session_start();
 
 // Inicializamos los ID.

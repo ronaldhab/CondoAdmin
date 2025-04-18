@@ -1,5 +1,5 @@
 <?php
-require_once 'dbteams.php';
+require_once 'db_condominios.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre_usuario = $_POST['nombre_usuario'];
