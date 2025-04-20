@@ -69,10 +69,14 @@ if ($row_residente = mysqli_fetch_assoc($resultado_residente)) {
 
 <body>
     <header>
-        <div class="container">
-            <h1>Editar Residente</h1>
+        <div>
+            <a class="header-container" href="home.php">
+                <img src="img/banner.jpg" class="logo">
+                <h1 class="title">Editar Residente</h1>
+            </a>
         </div>
     </header>
+
 
     <main>
         <div class="container">
@@ -121,4 +125,3 @@ if ($row_residente = mysqli_fetch_assoc($resultado_residente)) {
 </body>
 
 </html>
-

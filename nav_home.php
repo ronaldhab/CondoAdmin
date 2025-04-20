@@ -1,7 +1,7 @@
 <nav>
     <div class="contenedor">
         <a href="home.php">
-            <div class="elemento-izquierda">
+            <div class="home btn">
                 <img class="home_symbol" src="img/home.jpg" width="40" height="40">
             </div>
         </a>

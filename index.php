@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="header-container">
             <img src="img/banner.jpg" class="logo">
             <h1 class="title">Control de Condominios</h1>
         </div>

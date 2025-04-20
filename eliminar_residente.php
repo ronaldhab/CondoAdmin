@@ -49,9 +49,13 @@ if (isset($_POST['confirmar'])) {
 </head>
 
 <body>
+
     <header>
-        <div class="container">
-            <h1>Eliminar Residente</h1>
+        <div>
+            <a class="header-container" href="home.php">
+                <img src="img/banner.jpg" class="logo">
+                <h1 class="title">Eliminar Residente</h1>
+            </a>
         </div>
     </header>
 
@@ -84,5 +88,3 @@ if (isset($_POST['confirmar'])) {
 </body>
 
 </html>
-
-
