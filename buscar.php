@@ -83,7 +83,7 @@ if (isset($_POST['buscar'])) {
         <div class="container">
             <a href="home.php">
                 <img src="img/banner.jpg" class="logo">
-                <h1>Buscar Residente</h1>
+                <h1 class="title">Buscar Residente</h1>
             </a>
         </div>
     </header>
