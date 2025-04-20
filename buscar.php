@@ -11,21 +11,20 @@ if (isset($_POST['buscar'])) {
 
     // Consulta principal para obtener datos del residente.
     $sql_residente = "SELECT 
-        r.Nombre, 
-        r.Cedula, 
-        r.Telefono, 
-        r.Tipo_res AS Tipo, 
-        c.Pagos AS EstadoPago, 
-        a.Nro_apartamento 
-    FROM 
-        t_residentes r
-    LEFT JOIN 
-        t_cobranzas c ON r.Id_residente = c.Id_residente
-    LEFT JOIN 
-        t_apartamentos a ON c.Nro_apartamento = a.Nro_apartamento
-    WHERE 
-        r.Cedula = '$cedula';";
-
+                        r.Nombre, 
+                        r.Cedula, 
+                        r.Telefono, 
+                        r.Tipo_res AS Tipo, 
+                        c.Pagos AS EstadoPago, 
+                        a.Nro_apartamento 
+                    FROM 
+                        t_residentes r,
+                        t_cobranzas c,
+                        t_apartamentos a
+                    WHERE 
+                        r.Id_residente = c.Id_residente 
+                        AND c.Nro_apartamento = a.Nro_apartamento 
+                        AND r.Cedula = '$cedula'";
     $resultado = mysqli_query($cone, $sql_residente);
 
     if (mysqli_num_rows($resultado) > 0) {
@@ -33,14 +32,14 @@ if (isset($_POST['buscar'])) {
 
         // Consulta para obtener los meses pagados.
         $sql_meses_pagados = "SELECT 
-            Meses 
-        FROM 
-            t_cobranzas c
-        JOIN 
-            t_residentes r ON r.Id_residente = c.Id_residente
-        WHERE 
-            r.Cedula = '$cedula' AND c.Pagos = 'Pagado';";
-
+                                    Meses 
+                                FROM 
+                                    t_cobranzas c,
+                                    t_residentes r
+                                WHERE
+                                    r.Id_residente = c.Id_residente
+                                    AND r.Cedula = '$cedula' 
+                                    AND c.Pagos = 'Pagado'";
         $resultado_meses = mysqli_query($cone, $sql_meses_pagados);
 
         while ($row_mes = mysqli_fetch_assoc($resultado_meses)) {
@@ -49,14 +48,14 @@ if (isset($_POST['buscar'])) {
 
         // Consulta para obtener los meses con deuda.
         $sql_meses_deuda = "SELECT 
-            Meses 
-        FROM 
-            t_cobranzas c
-        JOIN 
-            t_residentes r ON r.Id_residente = c.Id_residente
-        WHERE 
-            r.Cedula = '$cedula' AND c.Pagos = 'Deuda';";
-
+                                Meses 
+                            FROM 
+                                t_cobranzas c,
+                                t_residentes r
+                            WHERE
+                                r.Id_residente = c.Id_residente 
+                                AND r.Cedula = '$cedula' 
+                                AND c.Pagos = 'Deuda'";
         $resultado_deudas = mysqli_query($cone, $sql_meses_deuda);
 
         while ($row_deuda = mysqli_fetch_assoc($resultado_deudas)) {
