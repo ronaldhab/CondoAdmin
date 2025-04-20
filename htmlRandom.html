@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard Condominios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="menu">
+                <li><a href="#"><i class="icon">🏠</i> Dashboard</a></li>
+                <li><a href="#"><i class="icon">🏢</i> Propiedades</a></li>
+                <li><a href="#"><i class="icon">👤</i> Residentes</a></li>
+                <li><a href="#"><i class="icon">💰</i> Pagos</a></li>
+                <li><a href="#"><i class="icon">🛠️</i> Mantenimiento</a></li>
+                <li><a href="#"><i class="icon">📣</i> Anuncios</a></li>
+                <li><a href="#"><i class="icon">📊</i> Reportes</a></li>
+                <li><a href="#"><i class="icon">⚙️</i> Configuración</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span class="username">Administrador</span>
+                    <button class="logout-btn">Cerrar Sesión</button>
+                </div>
+            </header>
+
+            <div class="overview">
+                <div class="overview-card">
+                    <h3>Total Propiedades</h3>
+                    <span class="value">150</span>
+                </div>
+                <div class="overview-card">
+                    <h3>Residentes Activos</h3>
+                    <span class="value">280</span>
+                </div>
+                <div class="overview-card">
+                    <h3>Pagos Pendientes</h3>
+                    <span class="value">15</span>
+                </div>
+                <div class="overview-card">
+                    <h3>Solicitudes Mantenimiento</h3>
+                    <span class="value">5</span>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="widget">
+                    <h3>Propiedades Recientes</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Dirección</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Av. Principal, Edif. Apto 101</td>
+                                <td>Ocupado</td>
+                                <td><a href="#">Ver</a></td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>Calle Secundaria, Casa 5</td>
+                                <td>Disponible</td>
+                                <td><a href="#">Ver</a></td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+
+                <div class="widget">
+                    <h3>Anuncios Recientes</h3>
+                    <ul>
+                        <li><i class="icon">📢</i> Próxima Asamblea de Condominio - 25/04/2025</li>
+                        <li><i class="icon">💧</i> Corte de Agua Programado - 22/04/2025</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

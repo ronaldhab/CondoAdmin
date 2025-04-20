@@ -99,7 +99,7 @@ if (isset($_POST['agregar'])) {
         <div class="container">
             <a href="home.php">
                 <img src="img/banner.jpg" class="logo">
-                <h1>Control de Pagos</h1>
+                <h1 class="title">Control de Pagos</h1>
             </a>
         </div>
     </header>

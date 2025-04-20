@@ -19,21 +19,21 @@ $row_propiedad = mysqli_fetch_assoc($resultado_propiedad);
 
 // Consulta para obtener los residentes vinculados a la propiedad.
 $sql_residentes = "SELECT 
-    r.Id_residente,
-    r.Nombre, 
-    r.Cedula, 
-    r.Telefono, 
-    r.Tipo_res AS Tipo
-FROM 
-    t_residentes r
-JOIN 
-    t_cobranzas c ON r.Id_residente = c.Id_residente
-JOIN 
-    t_apartamentos a ON c.Nro_apartamento = a.Nro_apartamento
-JOIN 
-    t_propiedades p ON a.Id_propiedad = p.Id_propiedad
-WHERE 
-    p.Id_propiedad = $id_propiedad;";
+                        r.Id_residente,
+                        r.Nombre, 
+                        r.Cedula, 
+                        r.Telefono, 
+                        r.Tipo_res AS Tipo
+                    FROM 
+                        t_residentes r,
+                        t_cobranzas c,
+                        t_apartamentos a,
+                        t_propiedades p
+                    WHERE
+                        r.Id_residente = c.Id_residente
+                        AND c.Nro_apartamento = a.Nro_apartamento
+                        AND a.Id_propiedad = p.Id_propiedad 
+                        AND p.Id_propiedad = $id_propiedad;";
 $resultado_residentes = mysqli_query($cone, $sql_residentes);
 ?>
 
@@ -50,9 +50,10 @@ $resultado_residentes = mysqli_query($cone, $sql_residentes);
 <body>
     <header>
         <div class="container">
-        <a href="home.php">
-            <img src="img/banner.jpg" class="logo">
-            <h1>Detalle de la Propiedad</h1>
+            <a href="home.php">
+                <img src="img/banner.jpg" class="logo">
+                <h1 class="title">Detalle de la Propiedad</h1>
+            </a>
         </div>
     </header>
 
@@ -80,7 +81,7 @@ $resultado_residentes = mysqli_query($cone, $sql_residentes);
                         </td>
                     </tr>
                 </table>
-                
+
                 <h2>Residentes</h2>
                 <table>
                     <thead>
@@ -127,5 +128,3 @@ $resultado_residentes = mysqli_query($cone, $sql_residentes);
 </body>
 
 </html>
-
-

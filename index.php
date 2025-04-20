@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <img src="img/banner.jpg" class="logo">
-            <h1>Control de Condominios</h1>
+            <h1 class="title">Control de Condominios</h1>
         </div>
     </header>
     <main>
@@ -55,8 +55,9 @@
     </main>
 </body>
 <footer>
-        <div class="container">
-            <p>&copy; 2025 Samueldhb</p>
-        </div>
-    </footer>
+    <div class="container">
+        <p>&copy; 2025 Samueldhb</p>
+    </div>
+</footer>
+
 </html>

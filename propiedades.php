@@ -13,13 +13,13 @@
         <div class="container">
             <a href="home.php">
                 <img src="img/banner.jpg" class="logo">
-                <h1>Control de Condominios</h1>
+                <h1 class="title">Gestión de Propiedades</h1>
         </div>
     </header>
 
     <?php
     include "nav_home.php";
-    //include "dbteams.php"; // Conexión a la base de datos.
+    include "db_condominios.php"; // Conexión a la base de datos.
     session_start();
 
     // Consulta para obtener todas las propiedades.
