@@ -29,6 +29,12 @@
                 <span class="nav_text">Buscar</span>
             </div>
         </a>
+        <a href="crear_residente.php">
+            <div class="nav_container">
+                <img class="nav_image" src="img/control.jpg" alt="Imagen 2" width="40" height="40">
+                <span class="nav_text">Crear Residente</span>
+            </div>
+        </a>
         <a href="logout.php" class="elemento-derecha">
             <div class="elemento-derecha-texto">
                 <span>
