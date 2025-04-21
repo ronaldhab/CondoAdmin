@@ -91,6 +91,7 @@ body {
   padding: 0;
   background-color: #f4f6f8;
   color: #333;
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
 }
 
 .dashboard-container {
@@ -176,12 +177,13 @@ body {
 .widget th,
 .widget td {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
   text-align: left;
 }
 
 .widget th {
-  background-color: #f9f9f9;
+  background-color: #3168b7;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -262,10 +264,112 @@ a {
   align-items: center;
 }
 
+.tabla-container {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deudas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Para que el border-radius funcione en la tabla */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.h3-deuda {
+  margin-top: 0;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+/* Estilos para la cabecera de la tabla (<th>) */
+.deudas-table th {
+  background-color: #3168b7;
+  color: #ffffff;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+}
+
+/* Estilos para las celdas de datos (<td>) */
+.deudas-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Estilo para la última fila de datos para quitar el border inferior */
+.deudas-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Estilo para filas pares del cuerpo de la tabla para un ligero contraste */
+.deudas-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilo al pasar el ratón por encima de las filas del cuerpo */
+.deudas-table tbody tr:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.deudas-table .acciones button,
+.deudas-table .acciones a {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
 .home {
   display: flex;
   align-items: center;
   margin-left: 30px;
+}
+
+.residentes-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Cambia la dirección a columnas */
+  align-items: flex-end; /* Alinea los elementos al inicio */
+  gap: 250px; /* Espaciado uniforme entre los elementos */
+  padding: 10px; /* Opcional: agrega un poco de espacio interno */
+}
+
+.crear-residente-container {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.crear-residente-boton {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #0050ab;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.crear-residente-boton:hover {
+  background-color: #003986;
 }
 
 .elemento-izquierda-texto {
@@ -374,19 +478,9 @@ select {
 }
 
 .button-container {
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 50px;
-}
-
-.button-container-texto {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: 30px;
-  background-color: #c7c4c4;
-  width: 150px;
-  transition: ease-in-out 0.5s;
 }
 
 .button-container-texto:hover {
@@ -403,13 +497,20 @@ select {
   text-align: center;
 }
 
-.button-container button {
+.button-container-texto {
+  display: flex;
+  align-items: center;
   margin-left: 30px;
-  margin-right: 30px;
   background-color: #c7c4c4;
-  height: 40px;
-  width: 150 px;
-  border: none;
+  width: 150px;
+  transition: ease-in-out 0.5s;
+}
+
+.button-container button {
+  display: flex;
+  background-color: #c7c4c4;
+  width: 150px; /* Cambia el ancho del botón */
+  height: 50px;
   font-size: 16px;
   transition: ease-in-out 0.5s;
 }

@@ -49,12 +49,12 @@ $resultado_residentes = mysqli_query($cone, $sql_residentes);
 
 <body>
     <header>
-        <div>
-            <a class="header-container" href="home.php">
+        <a href="home.php">
+            <div class="header-container">
                 <img src="img/banner.jpg" class="logo">
                 <h1 class="title">Detalle de la Propiedad</h1>
-            </a>
-        </div>
+            </div>
+        </a>
     </header>
 
     <?php include "nav_home.php"; ?>

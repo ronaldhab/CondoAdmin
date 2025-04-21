@@ -14,6 +14,7 @@
             <a class="header-container" href="home.php">
                 <img src="img/banner.jpg" class="logo">
                 <h1 class="title">Gestión de Propiedades</h1>
+            </a>
         </div>
     </header>
 
@@ -28,16 +29,9 @@
     ?>
 
     <main>
-        <div class="contenedor">
-            <a href="home.php">
-                <div class="button-container button-container-texto">
-                    <img src="img/volver.jpg" width="40" height="40">
-                    <span>Volver</span>
-                </div>
-            </a>
-        </div>
         <div class="container">
-            <section class="tabla-container">
+            <section class="widget">
+                <h3>Propiedades en seguimiento</h3>
                 <table>
                     <thead>
                         <tr>

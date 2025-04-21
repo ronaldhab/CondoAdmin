@@ -23,16 +23,10 @@
                 <span class="nav_text">Deudas</span>
             </div>
         </a>
-        <a href="buscar.php">
+        <a href="residentes.php">
             <div class="nav_container">
                 <img class="nav_image" src="img/buscar.jpg" alt="Imagen 4" width="40" height="40">
-                <span class="nav_text">Buscar</span>
-            </div>
-        </a>
-        <a href="crear_residente.php">
-            <div class="nav_container">
-                <img class="nav_image" src="img/control.jpg" alt="Imagen 2" width="40" height="40">
-                <span class="nav_text">Crear Residente</span>
+                <span class="nav_text">Residentes</span>
             </div>
         </a>
         <a href="logout.php" class="elemento-derecha">

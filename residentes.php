@@ -82,7 +82,7 @@ if (isset($_POST['buscar'])) {
         <div>
             <a class="header-container" href="home.php">
                 <img src="img/banner.jpg" class="logo">
-                <h1 class="title">Buscar Residente</h1>
+                <h1 class="title">Residentes</h1>
             </a>
         </div>
     </header>
@@ -90,13 +90,21 @@ if (isset($_POST['buscar'])) {
     <?php include "nav_home.php"; ?>
 
     <main>
-        <div class="container">
-            <h2>Buscar Residente</h2>
-            <form method="POST">
-                <label for="cedula">Cédula del Residente:</label>
-                <input type="text" id="cedula" name="cedula" required>
-                <button type="submit" name="buscar">Buscar</button>
-            </form>
+        <div class="residentes-container">
+
+            <div>
+                <h2>Buscar Residente</h2>
+                <form method="POST">
+                    <label for="cedula">Cédula del Residente:</label>
+                    <input type="text" id="cedula" name="cedula" required>
+                    <button type="submit" name="buscar">Buscar</button>
+                </form>
+            </div>
+
+            <!-- Botón para crear un nuevo residente -->
+            <div class="crear-residente-container">
+                <a href="crear_residente.php" class="crear-residente-boton">Crear Residente</a>
+            </div>
 
             <?php if (isset($residente)) { ?>
                 <section class="tarjeta-residente">

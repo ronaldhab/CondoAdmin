@@ -17,7 +17,7 @@ if (isset($_POST['guardar'])) {
                               '$tipo')";
     if (mysqli_query($cone, $sql_insertar)) {
       // Redirige incluyendo el ID de la propiedad en la URL.
-      header("Location: home.php?&msg=Residente añadido exitosamente");
+      header("Location: residentes.php?&alert=Residente añadido exitosamente");
       exit;
     } else {
       echo "<p>Error al agregar el residente: " . mysqli_error($cone) . "</p>";
@@ -26,7 +26,6 @@ if (isset($_POST['guardar'])) {
     echo "<p>Error: Tipo de residente inválido.</p>";
   }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +43,7 @@ if (isset($_POST['guardar'])) {
     <div>
       <a class="header-container" href="home.php">
         <img src="img/banner.jpg" class="logo">
-        <h1 class="title">Editar Residente</h1>
+        <h1 class="title">Crear Residente</h1>
       </a>
     </div>
   </header>
@@ -68,7 +67,7 @@ if (isset($_POST['guardar'])) {
             <button type="submit" name="guardar" class="button-container-texto guardar">
               Guardar Residente
             </button><br>
-            <a href="propiedad.php?id=<?php echo $id_propiedad; ?>" class="button-container-texto">
+            <a href="residentes.php" class="button-container-texto">
               Cancelar
             </a>
           </div>

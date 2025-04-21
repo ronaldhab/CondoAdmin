@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta de Deudas</title>
+    <link rel="stylesheet" href="tu_archivo_de_estilos.css" />
+  </head>
+  <body>
+    <table class="deudas-table">
+      <thead>
+        <tr>
+          <th class="usuario">Usuario</th>
+          <th class="concepto">Concepto de Deuda</th>
+          <th class="monto">Monto (USD)</th>
+          <th class="estado">Estado</th>
+          <th class="acciones">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="usuario">Juan Pérez</td>
+          <td class="concepto">Cuota de Mantenimiento - Abril 2025</td>
+          <td class="monto">50.00</td>
+          <td class="estado"><span class="pendiente">Pendiente</span></td>
+          <td class="acciones">
+            <button class="ver-detalles">Ver</button>
+            <button class="pagar">Pagar</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="usuario">María Gómez</td>
+          <td class="concepto">Servicio de Jardinería - Marzo 2025</td>
+          <td class="monto">25.50</td>
+          <td class="estado"><span class="pagado">Pagado</span></td>
+          <td class="acciones">
+            <button class="ver-detalles">Ver</button>
+          </td>
+        </tr>
+        <tr>
+          <td class="usuario">Carlos López</td>
+          <td class="concepto">Cuota Extraordinaria - Arreglo Techo</td>
+          <td class="monto">120.75</td>
+          <td class="estado"><span class="vencido">Vencido</span></td>
+          <td class="acciones">
+            <button class="ver-detalles">Ver</button>
+            <button class="pagar">Pagar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <a href="#">Anterior</a>
+      <a href="#" class="current">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">Siguiente</a>
+    </div>
+  </body>
+</html>
