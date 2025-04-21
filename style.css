@@ -68,7 +68,7 @@ nav {
 
 .nav_container:hover {
   background-color: #0050ab;
-  transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.2s;
 }
 
 .nav_container:hover .nav_text {
