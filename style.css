@@ -45,6 +45,7 @@ nav {
   border-bottom: solid #070707 5px;
   position: sticky;
   top: 0;
+  bottom: 0;
   z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
   background-color: #363636;
   color: #003986;
@@ -54,6 +55,11 @@ nav {
 
 .home_symbol {
   border-radius: 10%;
+}
+
+.home_symbol:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
 }
 
 .nav_container {
@@ -68,6 +74,7 @@ nav {
 
 .nav_container:hover {
   background-color: #0050ab;
+  transform: scale(1.1);
   transition: ease-in-out 0.2s;
 }
 
@@ -86,7 +93,7 @@ nav {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f6f8;
@@ -346,14 +353,13 @@ a {
 }
 
 .residentes-container {
+  display: flex;
+  align-items: start; /* Alinea los elementos al inicio */
+  gap: 250px; /* Espaciado uniforme entre los elementos */
   max-width: 1000px;
+  min-height: 60vh;
   margin: 0 auto;
   padding: 20px;
-  display: flex;
-  flex-direction: row; /* Cambia la dirección a columnas */
-  align-items: flex-end; /* Alinea los elementos al inicio */
-  gap: 250px; /* Espaciado uniforme entre los elementos */
-  padding: 10px; /* Opcional: agrega un poco de espacio interno */
 }
 
 .crear-residente-container {
@@ -511,6 +517,10 @@ select {
   transition: ease-in-out 0.5s;
 }
 
+.button-container-texto.danger {
+  background-color: #8d1305;
+}
+
 .button-container button {
   display: flex;
   background-color: #c7c4c4;
@@ -599,12 +609,11 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin: 10px;
+  margin-inline: auto;
   background-color: #00595f; /* Color de fondo */
   color: #ffffff; /* Color del texto */
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;

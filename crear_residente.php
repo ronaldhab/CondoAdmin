@@ -65,9 +65,9 @@ if (isset($_POST['guardar'])) {
           </select>
           <div class="button-container">
             <button type="submit" name="guardar" class="button-container-texto guardar">
-              Guardar Residente
+              Guardar
             </button><br>
-            <a href="residentes.php" class="button-container-texto">
+            <a href="residentes.php" class="button-container-texto danger">
               Cancelar
             </a>
           </div>
