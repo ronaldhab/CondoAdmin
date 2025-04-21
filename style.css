@@ -1,3 +1,7 @@
+/* * {
+  box-sizing: border-box;
+} */
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -382,8 +386,15 @@ a {
   align-items: center;
   margin-left: 30px;
   background-color: #c7c4c4;
-  width: 150px;
+  width: 180px;
   transition: ease-in-out 0.5s;
+}
+
+.elemento-izquierda-texto button.login {
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {
