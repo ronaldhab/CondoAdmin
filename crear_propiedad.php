@@ -1,57 +1,75 @@
 <?php
-// archivo: crear_propiedad.php
-// Incluir la conexión a la base de datos
-include_once "db_condominios.php"; 
+include "db_condominios.php"; // Conexión a la base de datos.
 session_start();
 
+if (isset($_POST['guardar'])) {
+  $nombre = mysqli_real_escape_string($cone, $_POST['nombre']);
+  $direccion = mysqli_real_escape_string($cone, $_POST['direccion']);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $nombre = $_POST['nombre'] ?? '';
-  $direccion = $_POST['direccion'] ?? '';
-  $precio = $_POST['precio'] ?? '';
-  $descripcion = $_POST['descripcion'] ?? '';
+  // Asegurar que solo se guarden "Propietario" o "Alquiler" en Tipo_res
 
-  if ($nombre && $direccion && $precio && $descripcion) {
-    $query = "INSERT INTO propiedades (nombre, direccion, precio, descripcion) VALUES (?, ?, ?, ?)";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("ssds", $nombre, $direccion, $precio, $descripcion);
-
-    if ($stmt->execute()) {
-      echo "Propiedad creada exitosamente.";
-    } else {
-      echo "Error al crear la propiedad: " . $stmt->error;
-    }
-
-    $stmt->close();
+  $sql_insertar = "INSERT INTO t_propiedades (Nom_propiedad, Direccion)  
+                      VALUES ('$nombre', 
+                              '$direccion')";
+  if (mysqli_query($cone, $sql_insertar)) {
+    // Redirige incluyendo el ID de la propiedad en la URL.
+    header("Location: propiedades.php");
+    exit;
   } else {
-    echo "Por favor, complete todos los campos.";
+    echo "<p>Error al agregar la propiedad: " . mysqli_error($cone) . "</p>";
   }
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crear Propiedad</title>
+  <title>Editar Residente</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Crear Propiedad</h1>
-  <form method="POST" action="crear_propiedad.php">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br><br>
+  <header>
+    <div>
+      <a class="header-container" href="home.php">
+        <img src="img/banner.jpg" class="logo">
+        <h1 class="title">Crear Residente</h1>
+      </a>
+    </div>
+  </header>
 
-    <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" name="direccion" required><br><br>
+  <main>
+    <div class="container">
+      <section class="tarjeta">
 
-    <label for="precio">Precio:</label>
-    <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+        <form method="POST" class="tarjeta-container">
+          <h2>Agregar Nueva Propiedad</h2>
+          <!-- Campo oculto para enviar el ID de la propiedad -->
+          <input type="hidden" name="id_propiedad" value="<?php echo $id_propiedad; ?>">
+          <input type="text" name="nombre" placeholder="Nombre de la Propiedad" required>
+          <input type="text" name="direccion" placeholder="Dirección de la Propiedad" required>
+          <div class="button-container">
+            <button type="submit" name="guardar" class="button-container-texto guardar">
+              Guardar Propiedad
+            </button><br>
+            <a href="propiedades.php" class="button-container-texto">
+              Cancelar
+            </a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
 
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" required></textarea><br><br>
-
-    <button type="submit">Crear Propiedad</button>
-  </form>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Samueldhb</p>
+    </div>
+  </footer>
 </body>
+
 </html>
