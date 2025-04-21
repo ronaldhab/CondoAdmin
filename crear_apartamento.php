@@ -3,12 +3,10 @@ include "db_condominios.php"; // Conexión a la base de datos.
 session_start();
 
 if (isset($_POST['guardar'])) {
-  $nombre = mysqli_real_escape_string($cone, $_POST['nombre']);
-  $direccion = mysqli_real_escape_string($cone, $_POST['direccion']);
+  $nro_apartamento = mysqli_real_escape_string($cone, $_POST['nro_apartamento']);
+  $id_propiedad = mysqli_real_escape_string($cone, $_POST['id_propiedad']);
 
-  // Asegurar que solo se guarden "Propietario" o "Alquiler" en Tipo_res
-
-  $sql_insertar = "INSERT INTO t_propiedades (Nom_propiedad, Direccion)  
+  $sql_insertar = "INSERT INTO t_apartamentos (Nro_apartamento)  
                       VALUES ('$nombre', 
                               '$direccion')";
   if (mysqli_query($cone, $sql_insertar)) {
