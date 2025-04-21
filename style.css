@@ -16,13 +16,13 @@
   margin: 0;
   padding: 0;
   height: 120px;
-  background-color: #0050ab; /* Color del banner */
+  background-color: #004ea8; /* Color del banner */
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #0050ab; /* Color del banner */
+  background-color: #004ea8; /* Color del banner */
   color: #f8f8f8;
   padding: 0;
 }
