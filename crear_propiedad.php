@@ -1,8 +1,9 @@
 <?php
 // archivo: crear_propiedad.php
-
 // Incluir la conexión a la base de datos
-include_once 'db_connection.php';
+include_once "db_condominios.php"; 
+session_start();
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $nombre = $_POST['nombre'] ?? '';
