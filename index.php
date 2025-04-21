@@ -41,11 +41,11 @@
                         <div class="button-container">
                             <div class="elemento-izquierda elemento-izquierda-texto">
                                 <img src="img/inisesion.jpg" width="40" height="40">
-                                <button type="submit" name="" value="iniciar_sesion">Iniciar sesión</button>
+                                <button type="submit" class="login" name="" value="iniciar_sesion">Iniciar sesión</button>
                             </div>
                             <div class="elemento-izquierda elemento-izquierda-texto">
                                 <img src="img/crearusu.jpg" width="40" height="40">
-                                <a href="crear_usuario.html"><button type="button">Crear usuario</button></a>
+                                <a href="crear_usuario.html"><button class="login" type="button">Crear usuario</button></a>
                             </div>
                         </div>
                     </form>

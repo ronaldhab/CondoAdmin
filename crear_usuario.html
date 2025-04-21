@@ -48,13 +48,20 @@
               <div class="button-container">
                 <div class="elemento-izquierda elemento-izquierda-texto">
                   <img src="img/crearusu.jpg" width="40" height="40" />
-                  <button type="submit" name="" value="crear_usuario">
+                  <button
+                    type="submit"
+                    class="login"
+                    name=""
+                    value="crear_usuario"
+                  >
                     Crear usuario
                   </button>
                 </div>
                 <div class="elemento-izquierda elemento-izquierda-texto">
                   <img src="img/volver.jpg" width="40" height="40" />
-                  <a href="index.php"><button type="button">Volver</button></a>
+                  <a href="index.php">
+                    <button class="login" type="button">Volver</button>
+                  </a>
                 </div>
               </div>
             </form>
@@ -65,11 +72,11 @@
 
     <script>
       function validarFormulario() {
-        var password = document.getElementById('password').value;
-        var confirmPassword = document.getElementById('confirm_password').value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
 
         if (password !== confirmPassword) {
-          alert('Las contraseñas no coinciden.');
+          alert("Las contraseñas no coinciden.");
           return false;
         }
         return true;
