@@ -56,6 +56,11 @@
                                 <td>
                                     <?php echo $row_propiedad["Direccion"]; ?>
                                 </td>
+                                <td>
+                                    <a href="crear_propiedad.php?id=<?php echo $row_propiedad["Id_propiedad"]; ?>">
+                                        <img src="img/añadir.png" width="30" height="30">
+                                    </a>
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>

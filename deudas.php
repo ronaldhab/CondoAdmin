@@ -92,8 +92,6 @@
             </table>
         </section>
     </div>
-    </div>
-    </main>
 </body>
 
 <footer>
