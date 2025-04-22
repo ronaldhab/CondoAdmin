@@ -27,28 +27,6 @@
     <?php
     include 'db_condominios.php';
 
-    // Consulta SQL
-    $SQL = "SELECT 
-                r.Nombre, 
-                r.Cedula, 
-                r.Telefono, 
-                p.Nom_propiedad AS Propiedad, 
-                a.Nro_apartamento, 
-                r.Tipo_res AS Tipo, 
-                c.Meses, 
-                c.Pagos
-            FROM 
-                t_residentes r,
-                t_cobranzas c,
-                t_apartamentos a,
-                t_propiedades p
-            WHERE
-                r.Id_residente = c.Id_residente
-                AND c.Nro_apartamento = a.Nro_apartamento
-                AND a.Id_propiedad = p.Id_propiedad;";
-
-    $resultado = mysqli_query($cone, $SQL);
-
 
     //Consulta para contar el total de residentes
     $SQL2 = "SELECT COUNT(*) FROM t_residentes;";

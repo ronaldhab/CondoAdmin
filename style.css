@@ -16,13 +16,13 @@
   margin: 0;
   padding: 0;
   height: 120px;
-  background-color: #0050ab; /* Color del banner */
+  background-color: #004ea8; /* Color del banner */
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #0050ab; /* Color del banner */
+  background-color: #004ea8; /* Color del banner */
   color: #f8f8f8;
   padding: 0;
 }
@@ -275,12 +275,88 @@ a {
   align-items: center;
 }
 
+.container-propiedad {
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  background-color: #eae1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.elementos-texto {
+  flex: 3;
+  text-align: center;
+}
+
 .tabla-container {
-  margin: 20px auto;
+  width: 100vh;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-container h2 {
+  text-align: left;
+}
+
+.tabla-container h3 {
+  margin-top: 0;
+  color: #555;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.tabla-container th,
+.tabla-container td {
+  padding: 15px;
+  text-align: center;
+}
+
+.tabla-container th {
+  background-color: #003986;
+  color: white;
+}
+
+.tabla-container tbody tr:nth-child(even) {
+  background-color: #c7c4c4;
+}
+
+.tabla-container tbody tr:nth-child(odd) {
+  background-color: #eae1e1;
+}
+
+.tabla-container {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.select-estado-pago {
+  width: 105%;
+  background-color: #eae1e1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.table-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .deudas-table {
@@ -366,13 +442,7 @@ a {
   padding: 20px;
 }
 
-.crear-residente-container {
-  margin-top: 20px;
-  text-align: right;
-}
-
 .crear-residente-boton {
-  display: flex;
   padding: 10px 15px;
   background-color: #0050ab;
   color: #ffffff;
@@ -467,6 +537,7 @@ h2 {
   width: 300px;
   text-align: center;
   padding: 20px;
+  margin-inline: auto;
   margin-bottom: 40px;
   border: none;
   background-color: #f7f4f4;
@@ -537,6 +608,31 @@ select {
   transition: ease-in-out 0.5s;
 }
 
+.btn-volver {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-inline: auto;
+  background-color: #00595f; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  display: flex;
+
+  align-items: center;
+}
+
 .button-container-texto.danger {
   background-color: #8d1305;
 }
@@ -552,40 +648,6 @@ select {
 
 .button-container button:hover {
   background-color: #eae1e1;
-}
-
-.tabla-container table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.tabla-container h2 {
-  text-align: left;
-}
-
-.tabla-container th,
-.tabla-container td {
-  padding: 15px;
-  text-align: left;
-}
-
-.tabla-container th {
-  background-color: #003986;
-  color: white;
-}
-
-.tabla-container tbody tr:nth-child(even) {
-  background-color: #c7c4c4;
-}
-
-.tabla-container tbody tr:nth-child(odd) {
-  background-color: #eae1e1;
-}
-
-.tabla-container {
-  border-collapse: collapse;
-  width: 100%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .paginacion {
@@ -653,6 +715,22 @@ footer {
 
 button.actualizar {
   background-color: #00595f; /* Fondo color azul oscuro */
+  color: #ffffff; /* Texto color blanco */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Indicador de clic */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.actualizar:hover {
+  background-color: #003986; /* Azul más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+button.eliminar {
+  background-color: #8d1305; /* Fondo color azul oscuro */
   color: #ffffff; /* Texto color blanco */
   border: none; /* Sin bordes */
   border-radius: 5px; /* Esquinas redondeadas */

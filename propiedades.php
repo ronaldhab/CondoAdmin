@@ -30,7 +30,7 @@
 
     <main>
         <div class="container">
-            <section class="widget">
+            <section class="tabla-container">
                 <h3>Propiedades en seguimiento</h3>
                 <table>
                     <thead>
@@ -38,6 +38,7 @@
                             <th></th>
                             <th>Nombre</th>
                             <th>Dirección</th>
+                            <th>Agregar Apartamento</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,8 +58,8 @@
                                     <?php echo $row_propiedad["Direccion"]; ?>
                                 </td>
                                 <td>
-                                    <a href="crear_propiedad.php?id=<?php echo $row_propiedad["Id_propiedad"]; ?>">
-                                        <img src="img/añadir.png" width="30" height="30">
+                                    <a href="crear_apartamento.php?id=<?php echo $row_propiedad["Id_propiedad"]; ?>">
+                                        <img src="img/añadir.jpg" width="30" height="30">
                                     </a>
                                 </td>
                             </tr>
