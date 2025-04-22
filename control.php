@@ -178,13 +178,13 @@ if (isset($_POST['agregar'])) {
                     <table>
                         <thead>
                             <tr>
-                                <th>Nombre</th>
-                                <th>Cédula</th>
-                                <th>Mes</th>
-                                <th>Apartamento</th>
-                                <th>Estado Actual</th>
-                                <th>Nuevo Estado</th>
-                                <th>Acciones</th>
+                                <th class="th-control-table">Nombre</th>
+                                <th class="th-control-table">Cédula</th>
+                                <th class="th-control-table">Mes</th>
+                                <th class="th-control-table">Apartamento</th>
+                                <th class="th-control-table">Estado Actual</th>
+                                <th class="th-control-table">Nuevo Estado</th>
+                                <th class="th-control-table">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -198,17 +198,21 @@ if (isset($_POST['agregar'])) {
                                     <td>
                                         <form method="POST" style="display:inline;">
                                             <input type="hidden" name="id_cobranza" value="<?php echo $row_cobranza['Id_cobranza']; ?>">
-                                            <select name="estado_pago" required>
+                                            <select class="select-estado-pago" name="estado_pago" required>
                                                 <option value="Pagado">Pagado</option>
                                                 <option value="Deuda">Deuda</option>
                                             </select>
                                     </td>
                                     <td>
-                                        <button type="submit" name="editar" class="actualizar">Actualizar</button>
+                                        <div class="table-btns">
+                                            <button type="submit" name="eliminar" class="button-container-texto">Eliminar</button>
+
+                                            <button type="submit" name="editar" class="actualizar">Actualizar</button>
+                                        </div>
+
                                         </form>
                                         <form method="POST" style="display:inline;">
                                             <input type="hidden" name="id_cobranza" value="<?php echo $row_cobranza['Id_cobranza']; ?>">
-                                            <button type="submit" name="eliminar" class="button-container-texto">Eliminar</button>
                                         </form>
                                     </td>
                                 </tr>

@@ -62,7 +62,7 @@ $resultado_residentes = mysqli_query($cone, $sql_residentes);
     <main>
         <div class="contenedor">
             <a href="propiedades.php">
-                <div class="button-container button-container-texto">
+                <div class="btn-volver">
                     <img src="img/volver.jpg" width="40" height="40">
                     <span>Volver</span>
                 </div>
@@ -70,20 +70,18 @@ $resultado_residentes = mysqli_query($cone, $sql_residentes);
         </div>
 
         <div class="container">
-            <section class="tabla-container">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="img/propiedades.jpg" width="150" height="150">
-                        </td>
-                        <td>
-                            <h2><?php echo $row_propiedad["Nom_propiedad"]; ?></h2>
-                            <p><strong>Dirección:</strong> <?php echo $row_propiedad["Direccion"]; ?></p>
-                            <p><strong>ID de la propiedad:</strong> <?php echo $row_propiedad["Id_propiedad"]; ?></p>
-                        </td>
-                    </tr>
-                </table>
+            <div class="container-propiedad">
 
+                <img src="img/propiedades.jpg" width="150" height="150">
+
+                <div class="elementos-texto">
+                    <h2><?php echo $row_propiedad["Nom_propiedad"]; ?></h2>
+                    <p><strong>Dirección:</strong> <?php echo $row_propiedad["Direccion"]; ?></p>
+                    <p><strong>ID de la propiedad:</strong> <?php echo $row_propiedad["Id_propiedad"]; ?></p>
+                </div>
+
+            </div>
+            <section class="tabla-container">
                 <h2>Residentes</h2>
                 <table>
                     <thead>

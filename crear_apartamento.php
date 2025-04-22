@@ -6,9 +6,7 @@ if (isset($_POST['guardar'])) {
   $nro_apartamento = mysqli_real_escape_string($cone, $_POST['nro_apartamento']);
   $id_propiedad = mysqli_real_escape_string($cone, $_POST['id_propiedad']);
 
-  $sql_insertar = "INSERT INTO t_apartamentos (Nro_apartamento)  
-                      VALUES ('$nombre', 
-                              '$direccion')";
+  $sql_insertar = "INSERT INTO t_apartamentos (Nro_apartamento, Id_propiedad) VALUES ('$nro_apartamento', '$id_propiedad')";
   if (mysqli_query($cone, $sql_insertar)) {
     // Redirige incluyendo el ID de la propiedad en la URL.
     header("Location: propiedades.php");
@@ -26,7 +24,7 @@ if (isset($_POST['guardar'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crear Propiedad</title>
+  <title>Crear Apartamento</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,7 +33,7 @@ if (isset($_POST['guardar'])) {
     <div>
       <a class="header-container" href="home.php">
         <img src="img/banner.jpg" class="logo">
-        <h1 class="title">Crear Propiedad</h1>
+        <h1 class="title">Crear Apartamento</h1>
       </a>
     </div>
   </header>
@@ -45,14 +43,23 @@ if (isset($_POST['guardar'])) {
       <section class="tarjeta">
 
         <form method="POST" class="tarjeta-container">
-          <h2>Agregar Nueva Propiedad</h2>
+          <h2>Agregar Nuevo Apartamento</h2>
           <!-- Campo oculto para enviar el ID de la propiedad -->
-          <input type="hidden" name="id_propiedad" value="<?php echo $id_propiedad; ?>">
-          <input type="text" name="nombre" placeholder="Nombre de la Propiedad" required>
-          <input type="text" name="direccion" placeholder="Dirección de la Propiedad" required>
+          <input type="text" name="nro_apartamento" placeholder="Número del apartamento" required>
+          <select name="id_propiedad" id="id_propiedad" required>
+            <option value="">Seleccionar Propiedad</option>
+            <?php
+            $sql_propiedades = "SELECT * FROM t_propiedades";
+            $resultado_propiedades = mysqli_query($cone, $sql_propiedades);
+            while ($row_propiedades = mysqli_fetch_assoc($resultado_propiedades)) { ?>
+              <option value="<?php echo $row_propiedades['Id_propiedad']; ?>">
+                <?php echo htmlspecialchars($row_propiedades['Nom_propiedad'] . " - " . $row_propiedades['Direccion']); ?>
+              </option>
+            <?php } ?>
+          </select>
           <div class="button-container">
             <button type="submit" name="guardar" class="button-container-texto guardar">
-              Guardar Propiedad
+              Guardar
             </button><br>
             <a href="propiedades.php" class="button-container-texto">
               Cancelar

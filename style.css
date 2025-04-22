@@ -97,7 +97,7 @@ nav {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f6f8;
@@ -275,12 +275,80 @@ a {
   align-items: center;
 }
 
+.container-propiedad {
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  background-color: #eae1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.elementos-texto {
+  flex: 3;
+  text-align: center;
+}
+
 .tabla-container {
-  margin: 20px auto;
+  width: 100vh;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-container h2 {
+  text-align: left;
+}
+
+.tabla-container th,
+.tabla-container td {
+  padding: 15px;
+  text-align: center;
+}
+
+.tabla-container th {
+  background-color: #003986;
+  color: white;
+}
+
+.tabla-container tbody tr:nth-child(even) {
+  background-color: #c7c4c4;
+}
+
+.tabla-container tbody tr:nth-child(odd) {
+  background-color: #eae1e1;
+}
+
+.tabla-container {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.select-estado-pago {
+  width: 105%;
+  background-color: #eae1e1;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.table-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .deudas-table {
@@ -538,6 +606,31 @@ select {
   transition: ease-in-out 0.5s;
 }
 
+.btn-volver {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-inline: auto;
+  background-color: #00595f; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  display: flex;
+  
+  align-items: center;
+}
+
 .button-container-texto.danger {
   background-color: #8d1305;
 }
@@ -553,40 +646,6 @@ select {
 
 .button-container button:hover {
   background-color: #eae1e1;
-}
-
-.tabla-container table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.tabla-container h2 {
-  text-align: left;
-}
-
-.tabla-container th,
-.tabla-container td {
-  padding: 15px;
-  text-align: left;
-}
-
-.tabla-container th {
-  background-color: #003986;
-  color: white;
-}
-
-.tabla-container tbody tr:nth-child(even) {
-  background-color: #c7c4c4;
-}
-
-.tabla-container tbody tr:nth-child(odd) {
-  background-color: #eae1e1;
-}
-
-.tabla-container {
-  border-collapse: collapse;
-  width: 100%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .paginacion {
