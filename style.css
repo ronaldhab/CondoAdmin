@@ -309,6 +309,14 @@ a {
   text-align: left;
 }
 
+.tabla-container h3 {
+  margin-top: 0;
+  color: #555;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
 .tabla-container th,
 .tabla-container td {
   padding: 15px;
@@ -434,13 +442,7 @@ a {
   padding: 20px;
 }
 
-.crear-residente-container {
-  margin-top: 20px;
-  text-align: right;
-}
-
 .crear-residente-boton {
-  display: flex;
   padding: 10px 15px;
   background-color: #0050ab;
   color: #ffffff;
@@ -627,7 +629,7 @@ select {
   text-align: center;
 
   display: flex;
-  
+
   align-items: center;
 }
 
@@ -713,6 +715,22 @@ footer {
 
 button.actualizar {
   background-color: #00595f; /* Fondo color azul oscuro */
+  color: #ffffff; /* Texto color blanco */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Esquinas redondeadas */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Indicador de clic */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.actualizar:hover {
+  background-color: #003986; /* Azul más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+button.eliminar {
+  background-color: #8d1305; /* Fondo color azul oscuro */
   color: #ffffff; /* Texto color blanco */
   border: none; /* Sin bordes */
   border-radius: 5px; /* Esquinas redondeadas */

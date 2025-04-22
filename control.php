@@ -205,9 +205,10 @@ if (isset($_POST['agregar'])) {
                                     </td>
                                     <td>
                                         <div class="table-btns">
-                                            <button type="submit" name="eliminar" class="button-container-texto">Eliminar</button>
 
                                             <button type="submit" name="editar" class="actualizar">Actualizar</button>
+                                            <button type="submit" name="eliminar" class="eliminar">Eliminar</button>
+
                                         </div>
 
                                         </form>

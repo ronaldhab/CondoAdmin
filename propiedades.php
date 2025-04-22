@@ -30,7 +30,7 @@
 
     <main>
         <div class="container">
-            <section class="widget">
+            <section class="tabla-container">
                 <h3>Propiedades en seguimiento</h3>
                 <table>
                     <thead>
@@ -38,6 +38,7 @@
                             <th></th>
                             <th>Nombre</th>
                             <th>Dirección</th>
+                            <th>Agregar Apartamento</th>
                         </tr>
                     </thead>
                     <tbody>

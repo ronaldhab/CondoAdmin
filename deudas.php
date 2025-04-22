@@ -52,9 +52,9 @@
     ?>
 
     <div class="container">
-        <section>
-            <h3 class="h3-deuda">Deudas Actuales</h3>
-            <table class="deudas-table">
+        <section class="tabla-container">
+            <h3>Deudas Actuales</h3>
+            <table>
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -81,10 +81,6 @@
                             <td><?php echo htmlspecialchars($row['Pagos']); ?></td>
                             <td>
                                 <a href="propiedad.php?id=<?php echo urlencode($row['Id_propiedad']); ?>" class="ver-detalles">Ver</a>
-                            </td>
-                            </td>
-                            </td>
-                            </form>
                             </td>
                         </tr>
                     <?php } ?>

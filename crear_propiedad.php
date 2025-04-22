@@ -56,7 +56,7 @@ if (isset($_POST['guardar'])) {
             <button type="submit" name="guardar" class="button-container-texto guardar">
               Guardar Propiedad
             </button><br>
-            <a href="propiedades.php" class="button-container-texto">
+            <a href="propiedades.php" class="button-container-texto danger">
               Cancelar
             </a>
           </div>
