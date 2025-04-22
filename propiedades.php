@@ -62,9 +62,17 @@
                                         <img src="img/añadir.jpg" width="30" height="30">
                                     </a>
                                 </td>
+                                
                             </tr>
                         <?php } ?>
                     </tbody>
+                </table>
+                <table>
+                    <tr><td class = "crear-propiedad">
+                                    <a href="crear_propiedad.php">
+                                        <b>Agregar Propiedad</b>
+                                    </a>
+                                </td></tr>
                 </table>
             </section>
         </div>

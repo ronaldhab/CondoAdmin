@@ -25,15 +25,23 @@
         </a>
         <a href="residentes.php">
             <div class="nav_container">
-                <img class="nav_image" src="img/buscar.jpg" alt="Imagen 4" width="40" height="40">
+                <img class="nav_image" src="img/residentes.jpg" alt="Imagen 4" width="40" height="40">
                 <span class="nav_text">Residentes</span>
-            </div>
+            </div></a>
+
+            <a href="buscar.php">
+            <div class="nav_container">
+                <img class="nav_image" src="img/buscar.jpg" alt="Imagen 4" width="40" height="40">
+                <span class="nav_text">Buscar</span>
+            </div></a>
+
             <a href="respaldo.php">
             <div class="nav_container">
-                <img class="nav_image" src="img/respaldo.jpg" alt="Imagen 5" width="40" height="40">
+                <img class="nav_image" src="img/respaldo.jpg" alt="Imagen 6" width="40" height="40">
                 <span class="nav_text">Respaldo</span>
-            </div>
-        </a>
+            </div></a>
+
+            
         <a href="logout.php" class="elemento-derecha">
             <div class="elemento-derecha-texto">
                 <span>

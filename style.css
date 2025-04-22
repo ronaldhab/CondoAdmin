@@ -529,8 +529,9 @@ h2 {
 
 .tarjeta-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
+  gap: 10px
 }
 
 .tarjeta {
@@ -760,4 +761,25 @@ button.guardar {
 button.guardar:hover {
   background-color: #003986; /* Azul más oscuro en hover */
   transform: scale(1.05); /* Efecto de zoom */
+}
+
+.crear-propiedad {
+  background-color: #003986; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}	
+
+.crear-propiedad a {
+  text-decoration: none;
+  color: #ffffff; /* Color del texto */
+}
+
+.crear-propiedad:hover {
+  background-color: #0058ca; /* Azul más oscuro en hover */
+  transition: ease-in-out 0.2s;
+  
 }

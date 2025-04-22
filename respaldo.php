@@ -13,14 +13,24 @@
         </div>
     </header>
 <main>
-<div class="container">
+<div class="tarjeta">
+    <div class= "tarjeta-container">
             <h2>Opciones de Respaldo</h2>
             <button id="backup-db" class="button-container-texto">Respaldar Base de Datos</button>
             <button id="backup-files" class="button-container-texto">Respaldar Archivos</button>
             <p id="backup-status"></p>
-        </div>
-</main>
+        </div></div>
 
+
+
+        <div class="contenedor">
+            <a href="home.php">
+                <div class="btn-volver">
+                    <img src="img/volver.jpg" width="40" height="40">
+                    <span>Volver</span>
+                </div>
+            </a>
+</main>
     <footer>
         <div class="container">
             <p>&copy; 2025 Samueldhb</p>

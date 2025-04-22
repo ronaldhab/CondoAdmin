@@ -80,7 +80,7 @@
                             <td><?php echo htmlspecialchars($row['Meses']); ?></td>
                             <td><?php echo htmlspecialchars($row['Pagos']); ?></td>
                             <td>
-                                <a href="propiedad.php?id=<?php echo urlencode($row['Id_propiedad']); ?>" class="ver-detalles">Ver</a>
+                                <a href="control.php" class="ver-detalles">Ver</a>
                             </td>
                         </tr>
                     <?php } ?>
